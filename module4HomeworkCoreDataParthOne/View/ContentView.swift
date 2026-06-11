@@ -57,6 +57,8 @@ struct ContentView: View {
                 ToolbarItem(placement: .topBarTrailing) {
                     Button("Добавить") {
                         saveProduct()
+                        viewModel.titleProduct = ""
+                        viewModel.priceProduct = ""
                     }
                     .disabled(viewModel.titleProduct.isEmpty || viewModel.priceProduct.isEmpty)
                 }
